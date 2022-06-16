@@ -44,12 +44,16 @@ body {
     line-height: 1.7;
 }
 
+img {
+    display: block;
+}
 .link {
     text-decoration: none;
 }
 
 .list {
     list-style: none;
+    padding-left: 0;
 }
 
 .current,
@@ -68,8 +72,22 @@ body {
 .foot-link:hover {
     cursor: pointer;
 }
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
 /* header */
+
+header>.container {
+    display: flex;
+}
+.logotype {
+    padding: 25px 0;
+    margin-right: 93px;
+}
 .logo,
 .type {
     font-family: "Raleway";
@@ -92,9 +110,30 @@ body {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
+
+    display: flex;
+}
+
+.nav-list>li:first-child,
+.nav-list>li:nth-child(2) {
+    padding: 25px 0;
+    margin-right: 50px;
+    
+}
+ 
+.nav-list>li:last-child,
+.contact>li {
+    padding: 25px 0;
+    
 }
 .nav-link {
     color: var(--titl-cl);
+}
+.contact {
+    margin-left: auto;
+}
+.contact>li:last-child {
+    padding-left: 50px;
 }
 .contact-link {
     color: inherit;
@@ -105,7 +144,11 @@ body {
 .hat {
     background-color: var(--bcg-dark);
     text-align: center;
+
+    margin-top: 47px;
+    padding-bottom: 200px;
 }
+
 
 .hat-title {
     color: var(--primery-cl);
@@ -113,6 +156,11 @@ body {
     font-size: 44px;
     line-height: 1.36;
     text-transform: uppercase;
+
+    padding-top: 200px; 
+    margin-top: 0;
+    margin-bottom: 30px;
+    
    
 }
 
@@ -122,6 +170,9 @@ body {
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
+
+    padding: 10px 32px;
+    border-radius: 4px;
 }
 
 .hat-btn:hover,
@@ -132,17 +183,32 @@ body {
 
 /* peculiarities */
 
+.peculiarities {
+    margin-top: 47px;
+}
+.peculiarities>.list {
+    display: flex;
+    gap: 30px;
+}
+.peculiarities-item {
+    flex-basis: calc((100%-90px)/4);
+}
 .peculiarities-title {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
-
     color: var(--titl-cl);
+
+    margin: 0 0 10px;
+
 }
 
 /* doing */
 
+.doing {
+    margin-top: 94px;
+}
 .doing-title {
     font-weight: 700;
     font-size: 36px;
@@ -150,10 +216,20 @@ body {
     text-align: center;
 
     color: var(--titl-cl);
+
+    margin: 0 0 50px;
+}
+.doing-list {
+    display: flex;
+    gap: 30px;
 }
 
 /* team */
 
+.team {
+    margin-top: 94px;
+    padding-bottom: 94px;
+}
 .team-title {
     font-weight: 700;
     font-size: 36px;
@@ -161,6 +237,14 @@ body {
     text-align: center;
 
     color: var(--titl-cl);
+    padding-top: 94px;
+    margin: 0 0 50px;
+}
+
+.team-list {
+    margin: 0;
+    display: flex;
+    gap: 30px;
 }
 
 .team-list-title {
@@ -168,31 +252,45 @@ body {
     font-size: 16px;
     line-height: 1.18;
 
-    color: var(--titl-cl)
+    color: var(--titl-cl);
+    margin: 30px 0 0;
 }
 
 .team-list-txt {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.18;
+
+    margin: 10px 0 0;
 }
 
 /* footer */
 
 .foot {
     background-color: var(--bcg-dark);
+    padding-bottom: 60px;
 }
 
+.foot .logotype {
+    padding: 60px 0 0;
+}
 .foot .type {
     color: var(--primery-cl);
 }
 
+.foot-list {
+    margin: 20px 0 0;
+}
 .foot-adr,
 .foot-link {
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
+}
+
+.foot-list>li:nth-child(2) {
+    margin: 9px 0;
 }
 
 .foot-adr {
@@ -205,8 +303,21 @@ body {
 
 /* portfolio */
 
+.portfolio-main {
+    margin: 94px 0 0;
+}
+
 /* filters */
 
+.filters {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    width: 611px;
+
+    margin: 0 auto;
+    padding-bottom: 16px;
+}
 .filters-btn {
     font-weight: 500;
     font-size: 16px;
@@ -214,6 +325,9 @@ body {
 
     color: var(--titl-cl);
     background-color: var(--bcg-light);
+    border: none;
+    border-radius: 4px;
+    padding: 6px 22px;
 }
 
 .filters-btn.current,
@@ -225,16 +339,28 @@ body {
 
 /* galary */
 
+.galary {
+    margin: 34px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 94px;
+}
 .galary-title {
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
 
     color: var(--titl-cl);
+    padding: 0 24px;
+    margin: 20px 0 0;
 }
 
 .galary-txt {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.87;
+
+    padding: 0 24px;
+    margin: 4px 0 0;
 }
