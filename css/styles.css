@@ -200,10 +200,11 @@ header>.container {
 }
 .peculiarities>.list {
     display: flex;
-    gap: 30px;
+    gap: var(--card-gap);
+    margin: 0;
 }
 .peculiarities-item {
-    flex-basis: calc((100% - 90px) / 4);
+    flex-basis: calc((100% - 3 * var(--card-gap)) / 4);
 }
 .peculiarities-title {
     font-weight: 700;
@@ -233,7 +234,7 @@ header>.container {
 }
 .doing-list {
     display: flex;
-    gap: 30px;
+    gap: var(--card-gap);
 }
 
 /* team */
@@ -264,13 +265,11 @@ header>.container {
     border-radius: 0px 0px 4px 4px;
 }
 
-.team-list>li {
+.team-item {
     margin-left: var(--card-gap);
+    flex-basis: calc((100% - 4 * var(--card-gap)) / 4);
 }
-.team-list .card {
-    flex-basis: calc(100% / 4 - var(--card-gap));
-    
-}
+
 
 .card-content {
     text-align: center;
@@ -382,14 +381,12 @@ header>.container {
     margin-left: calc(-1*var(--card-gap));
 }
 
-.galary>li {
+.galary-item {
     margin-top: var(--card-gap);
     margin-left: var(--card-gap);
+    flex-basis: calc((100% - 3 * var(--card-gap)) / 3);
 }
-.galary .card {
-    flex-basis: calc(100% / 3 - var(--card-gap));
-   
-}
+
 .galary-card-content {
     padding: 20px 24px;
 } 
