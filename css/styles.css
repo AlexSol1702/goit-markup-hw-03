@@ -256,9 +256,12 @@ header>.container {
     border-radius: 0px 0px 4px 4px;
 }
 
+.team-list>li {
+    margin-left: var(--card-gap);
+}
 .team-list .card {
     flex-basis: calc(100% / 4 - var(--card-gap));
-    margin-left: var(--card-gap);
+    
 }
 
 .card-content {
@@ -370,10 +373,14 @@ header>.container {
     margin-top: calc(-1 * var(--card-gap));
     margin-left: calc(-1*var(--card-gap));
 }
-.galary .card {
-    flex-basis: calc(100% / 3 - var(--card-gap));
+
+.galary>li {
     margin-top: var(--card-gap);
     margin-left: var(--card-gap);
+}
+.galary .card {
+    flex-basis: calc(100% / 3 - var(--card-gap));
+   
 }
 .galary-card-content {
     padding: 20px 24px;
